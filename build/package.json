@@ -21,10 +21,10 @@
     "express-graphql": "^0.6.12",
     "graphql": "^0.13.2",
     "jsonwebtoken": "^8.3.0",
-    "mongoose": "^5.3.1"
+    "mongoose": "^5.3.1",
+    "nodemon": "^1.18.4"
   },
   "devDependencies": {
-    "nodemon": "^1.18.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0"
   }
 }
