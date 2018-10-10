@@ -5,26 +5,27 @@ import User from './src/schemas/users';
 import bodyParser from 'body-parser';
 import { createToken } from './src/resolvers/create';
 import { verifyToken } from './src/resolvers/verify';
+
 import graphQLHTTP from 'express-graphql';
 import schema from './src/graphql';
 
 
 const app = express();
 const jsonParser = bodyParser.json();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 
 app.get('/', function(req,res){
     res.send('Hello world');
 })
-app.listen(port, '0.0.0.0',() => {
-    console.log('Server WORKS on port ' + port);
+app.listen(PORT,() => {
+    console.log('Server WORKS on PORT ' + PORT);
 })
 mongoose.connect('mongodb://backendCaro:backendCaro123@ds121753.mlab.com:21753/backend');
 //mongoose.connect('mongodb://gabo16:gabo16@ds123173.mlab.com:23173/backend');
 const db = mongoose.connection;
 db.on('error', () => console.log("failed to connect to database"))
-    .once('open', ()=> console.log("Connected to the data base ", port))
+    .once('open', ()=> console.log("Connected to the data base ", PORT))
 
     app.get('/userlist', function(req, res){
         Client.find({}).then(function(users){   
