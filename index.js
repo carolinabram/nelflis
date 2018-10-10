@@ -17,7 +17,7 @@ const port = process.env.PORT || 3000;
 app.get('/', function(req,res){
     res.send('Hello world');
 })
-app.listen(port, () =>{
+app.listen(port, '0.0.0.0',() => {
     console.log('Server WORKS on port ' + port);
 })
 mongoose.connect('mongodb://backendCaro:backendCaro123@ds121753.mlab.com:21753/backend');
