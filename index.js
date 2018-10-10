@@ -20,7 +20,7 @@ app.get('/', function(req,res){
 app.listen(port, () =>{
     console.log('Server WORKS on port ' + port);
 })
-mongoose.connect('mongodb://backendCaro:backendCaro123@ds121753.mlab.com:21753/backend')
+mongoose.connect('mongodb://backendCaro:backendCaro123@ds121753.mlab.com:21753/backend');
 //mongoose.connect('mongodb://gabo16:gabo16@ds123173.mlab.com:23173/backend');
 const db = mongoose.connection;
 db.on('error', () => console.log("failed to connect to database"))
