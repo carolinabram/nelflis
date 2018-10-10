@@ -32,7 +32,9 @@ var _graphql = require('./src/graphql');
 
 var _graphql2 = _interopRequireDefault(_graphql);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+}
 
 var app = (0, _express2.default)();
 var jsonParser = _bodyParser2.default.json();
